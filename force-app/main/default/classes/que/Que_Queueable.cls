@@ -28,9 +28,11 @@ public without sharing class Que_Queueable implements Queueable, Database.Allows
             Logger.error(
                 new LogMessage('execute({0})', context, ex)
             );
-        }
 
-        //TODO do we want to log all queueable processes?
+            Logger.saveLog();
+        }
         Logger.saveLog();
+
+        
     }
 }

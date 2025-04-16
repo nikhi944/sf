@@ -63,6 +63,7 @@ public virtual class TriggerHandler {
         } catch (Exception ex) {
             Logger.exception('run()', ex);
         }
+        
     }
 
     public void setMaxLoopCount(Integer max) {
