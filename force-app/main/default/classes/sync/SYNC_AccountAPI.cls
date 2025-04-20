@@ -30,7 +30,7 @@ global with sharing class SYNC_AccountAPI extends API_Handler {
         List<SYNC_ErrorDTO> failedSync = new List<SYNC_ErrorDTO>();
         for(Integer index = 0; index<results.size(); index++){
             Database.UpsertResult result = results.get(index);
-            Account failedAccount = accounts.get(0);
+            Account failedAccount = accounts.get(index);
 
             if(!result.isSuccess()){
                 SYNC_ErrorDTO fail = new SYNC_ErrorDTO();
